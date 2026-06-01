@@ -428,9 +428,10 @@ HouseOfHearts.calculate = function(self, context)
 
         local total_skips = 0
 
-        for i = ante, ante - 4, -1 do
+        for i = ante - 4, ante do
             total_skips = total_skips + (G.GAME.blinds_skipped_ante[i] or 0)
         end
+        print(total_skips)
 
         if total_skips >= 5 then
             check_for_unlock({type = 'break_time'})

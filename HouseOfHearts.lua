@@ -1099,6 +1099,8 @@ reset_ktb_suit = function()
 end
 
 mod.reset_game_globals = function(run_start)
-	reset_ktb_suit()
-    reset_skip_count()
+    if run_start then
+        reset_ktb_suit()
+        reset_skip_count()
+    end
 end
